@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #828282;
+        }
+
+        #layout{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #nav{
+            flex-basis: 100%;
+            border-bottom: 1px solid #aaa;
+            padding: 20px;
+        }
+
+        #sidebar{
+            flex-basis: 20%;
+            border-right: 1px solid #aaa;
+            padding: 20px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        #content{
+            flex-basis: 80%;
+            padding: 20px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        #imgg{
+            width: 50%;
+            height: auto;
+        }
+
+
+        @media (max-width: 650px) {
+            #sidebar, #content{
+                flex-basis: 100%;
+                border-right: 0;
+                background-color: rgb(94, 57, 128);
+            }
+            
+        }
+
+        @media (max-width: 550px){
+            #imgg{
+                width: 50px;
+                height: 25px;
+
+            }
+        }
+
+        @media (max-width: 450px){
+            #sidebar{
+                display: none;
+            }
+            body{
+                background-color: aquamarine;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="layout">
+
+        <div id="nav">
+            navigation
+        </div>
+        <div id="sidebar">
+            sidebar
+        </div>
+        <div id="content">
+            content
+        </div>
+        <div>
+            <img src="end.jpg" id="imgg" alt="">
+        </div>
+
+    </div>
+</body>
+</html>
